@@ -65,11 +65,12 @@ pldb::QueryHandler::~QueryHandler() {
 }
 
 void pldb::QueryHandler::write(const std::string &record) {
+    std::cout << "appending record: " << record << std::endl;
     file << record << "\n";
 }
 
 std::string pldb::QueryHandler::read(const std::string &key) {
-
+    std::cout << "reading key: " << key << std::endl;
     file.clear();
     file.seekg(0, std::ios::beg);
     std::string line, target;

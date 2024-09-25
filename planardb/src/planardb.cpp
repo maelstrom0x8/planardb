@@ -7,8 +7,6 @@
 pldb::planardb::planardb() : server{PORT} {}
 
 int pldb::planardb::run(int argc, char *argv[]) {
-    argv = cli_parser.ensure_utf8(argv);
-    CLI11_PARSE(cli_parser, argc, argv);
     server.start();
 
     return 0;
